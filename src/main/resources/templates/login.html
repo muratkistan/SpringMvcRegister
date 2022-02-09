@@ -1,0 +1,65 @@
+<!doctype html>
+<html  th:lang="${#locale.language}"  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+
+</head>
+<body>
+<!--start codes-->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light " role="navigation">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/}"><strong>Home</strong></a>
+
+        <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+
+            <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                <li class="nav-item"><a th:href="@{/login}"  class="nav-link">Login</a></li>
+                <li class="nav-item"><a th:href="@{/register}" class="nav-link">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>>
+<p th:text="LOGIN" class="text-center display-4 "></p>
+
+<form class="mainForm" th:method="post" th:action="@{/login}" th:object="${key_login}">
+
+    <div class="container">
+
+
+
+            <div class=" form-group">
+                <label th:text="Email" ></label>
+                <input  type="text" class="form-control" autofocus >
+            </div>
+
+
+            <div class=" form-group">
+                <label th:text="Password"></label>
+                <input  type="password" class="form-control" autofocus>
+            </div>
+
+
+        <div class=" form-group text-center mt-3">
+                <input  type="submit" class="btn btn-success text-center" value="Login">
+        </div>
+
+
+    </div>
+
+</form>
+
+
+<!--end codes-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
