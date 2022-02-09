@@ -21,6 +21,7 @@ import java.util.Date;
 @Table(name = "users")
 public class UserEntity {
 
+    //Primary Key
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

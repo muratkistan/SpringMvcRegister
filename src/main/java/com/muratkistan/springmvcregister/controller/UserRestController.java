@@ -44,10 +44,10 @@ public class UserRestController {
     //Update User By Id
     //http://localhost:8080/api/v1/users/update/2
     @GetMapping("/update/{id}")
-    public UserEntity updateCustomer(@PathVariable Long id,@RequestBody UserEntity user) {
+    public UserEntity updateUser(@PathVariable Long id,@RequestBody UserEntity user) {
 
 
-       return userService.updateCustomer(id,user);
+       return userService.updateUser(id,user);
 
 
     }

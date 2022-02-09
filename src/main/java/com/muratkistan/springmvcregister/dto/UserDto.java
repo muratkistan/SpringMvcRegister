@@ -20,6 +20,7 @@ import javax.validation.constraints.Size;
 @Log4j2
 public class UserDto {
 
+    //This field can not null
     @NotEmpty(message = "First Name can not be null")
     private String firstName;
 
@@ -31,6 +32,7 @@ public class UserDto {
     private String emailAddress;
 
 
+    //Password pattern
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$", message="Password must have at least 1 uppercase,1 lowercase letter and 1 number")
     private String password;
 

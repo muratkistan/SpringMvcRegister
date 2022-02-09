@@ -44,7 +44,7 @@ public class UserService {
         return user.orElse(null);
     }
 
-    public UserEntity updateCustomer(Long id,UserEntity user) {
+    public UserEntity updateUser(Long id,UserEntity user) {
 
         Optional<UserEntity>  optional = userRepository.findById(id);
 
